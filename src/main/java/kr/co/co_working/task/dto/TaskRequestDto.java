@@ -7,14 +7,7 @@ public class TaskRequestDto {
     @Getter
     @Setter
     public static class CREATE {
-        private String name;
-        private String type;
-        private String description;
-    }
-
-    @Getter
-    @Setter
-    public static class UPDATE {
+        private Long projectId;
         private String name;
         private String type;
         private String description;
@@ -26,5 +19,23 @@ public class TaskRequestDto {
         private String name;
         private String type;
         private String description;
+    }
+
+    @Getter
+    @Setter
+    public static class UPDATE {
+        private Long id;
+        private Long projectId;
+        private String name;
+        private String type;
+        private String description;
+    }
+
+    @Getter
+    @Setter
+    public static class DELETE {
+        private Long projectId;
+
+        public DELETE() { }
     }
 }
